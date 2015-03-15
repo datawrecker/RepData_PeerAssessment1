@@ -66,7 +66,7 @@ As we can see, most of the days, the steps taken by the individual are around be
 The mean and median of total number of steps taken per day are `r as.integer(meanVal)` and `r medianVal`.
 
 ## What is the average daily activity pattern?
-To find out the average daily activity pattern, we aggregate the data on a 5-minute-interval basis. A time series plot will help observe how the steps taken during intervals vary across the day. Again here we ignore the missing values.
+To find out the average daily activity pattern, we firstly aggregate the data on a 5-minute-interval basis. A time series plot will help observe how the steps taken during intervals vary across the day. Again here we ignore the missing values.
 ```{r, echo=T}
 meanByTime <- aggregate(acts$steps, by=list(acts$time), mean, na.rm=T)
 names(meanByTime) <- c("time", "steps")

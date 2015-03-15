@@ -114,7 +114,7 @@ with(sumByDate, hist(x,
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>
-<p>To find out the average daily activity pattern, we aggregate the data on a 5-minute-interval basis. A time series plot will help observe how the steps taken during intervals vary across the day. Again here we ignore the missing values.</p>
+<p>To find out the average daily activity pattern, we firstly aggregate the data on a 5-minute-interval basis. A time series plot will help observe how the steps taken during intervals vary across the day. Again here we ignore the missing values.</p>
 <pre class="r"><code>meanByTime &lt;- aggregate(acts$steps, by=list(acts$time), mean, na.rm=T)
 names(meanByTime) &lt;- c(&quot;time&quot;, &quot;steps&quot;)
 maxSteps &lt;- max(meanByTime$steps)
